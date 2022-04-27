@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WebGL Demo</title>
+    <link rel="stylesheet" href="./webgl.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous" defer>
+    </script>
+    <script src="webgl-demo.js" defer></script>
+  </head>
+
+  <body>
+    
+    <div id="container">
+      <canvas id="glcanvas" width="640" height="480"></canvas>
+    </div>
+
+    <div id="userActions">
+
+      <span>X-axis rotation: </span>
+      <input type="range" id="r1"  min="0" max="10000" value="0" oninput="fun1()"/>
+      <p></p>
+      <span>Y-axis rotation: </span>
+      <input type="range" id="r2"  min="0" max="10000" value="0" oninput="fun2()"/>
+      <p></p>
+      <span>Z-axis rotation: </span>
+      <input type="range" id="r3"  min="0" max="10000" value="0" oninput="fun3()"/>
+      <p></p>
+
+      <p id="coordinates_x"></p>
+
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Select color</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#" onclick="selectedRed()">Red</a>
+          <a href="#" onclick="selectedOrange()">Orange</a>
+          <a href="#" onclick="selectedYellow()">Yellow</a>
+          <a href="#" onclick="selectedGreen()">Green</a>
+          <a href="#" onclick="selectedBlue()">Blue</a>
+          <a href="#" onclick="selectedPurple()">Purple</a>
+        </div>
+      </div>
+
+      <div class="dropdown2">
+        <button onclick="myFunction2()" class="dropbtn2">Show index of element</button>
+        <div id="myDropdown2" class="dropdown-content2">
+          <a href="#" onclick="selected0()">Index 0</a>
+          <a href="#" onclick="selected1()">Index 1</a>
+          <a href="#" onclick="selected2()">Index 2</a>
+          <a href="#" onclick="selected3()">Index 3</a>
+          <a href="#" onclick="selected4()">Index 4</a>
+          <a href="#" onclick="selected5()">Index 5</a>
+          <a href="#" onclick="selected6()">Index 6</a>
+          <a href="#" onclick="selected7()">Index 7</a>
+        </div>
+      </div>
+
+      <p></p>
+      <span id="alpha">Alpha:    </span>
+      <input type="range" id="alphaSlider"  min="0" max="255" value="255" oninput="alphaHandler()"/>
+    
+    </div>
+
+
+  </body>
+</html>
